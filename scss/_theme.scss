@@ -1,0 +1,122 @@
+header {
+    background: $white;
+
+    .logo {
+        color: $black;
+        display: block;
+        font-size: 1.5em;
+        font-weight: 900;
+        margin: 20px 20px;
+        text-align: center;
+
+        span {
+            display: block;
+            font-family: $body-font-family;
+            font-size: .65em;
+            font-weight: normal;
+        }
+    }
+}
+
+.container {
+    @include grid-row;
+    max-width: 98%;
+    margin: 0 auto;
+}
+
+main {
+    background: $black;
+    padding: 60px 0;
+
+    .tag {
+        h2 {
+            border-bottom: 2px solid $primary-color;
+            color: $white;
+            padding-bottom: 8px;
+            margin-bottom: 8px;
+        }
+
+        p {
+            color: $white;
+        }
+
+        @include grid-col;
+
+        @include breakpoint(medium) {
+            @include grid-col-size(6);
+        }
+    }
+
+    .graphic {
+        @include grid-col;
+
+        @include breakpoint(medium) {
+            @include grid-col-size(6);
+        }
+    }
+}
+
+.services {
+    background: $white;
+    padding: 60px 0;
+
+    h2 {
+        color: $dark-gray;
+        text-align: center;
+    }
+
+    .column {
+        @include grid-col;
+
+        @include breakpoint(medium) {
+            @include grid-col-size(4);
+        }
+    }
+
+    .card {
+        background: $medium-gray;
+        border-radius: 8px;
+        color: $white;
+
+        .card-divider {
+            background: $medium-gray;
+
+            h3 {
+                color: $white;
+                font-family: $body-font-family;
+                font-size: 1em;
+                font-weight: normal;
+                text-transform: uppercase;
+            }
+        }
+
+        .card-image {
+
+        }
+
+        .card-section {
+
+        }
+    }
+}
+
+footer {
+    background: $primary-color;
+    padding: 60px 0;
+
+    .address {
+        @include grid-col;
+
+        @include breakpoint(medium) {
+            @include grid-col-size(6);
+        }
+    }
+
+    .contact {
+        @include grid-col;
+
+        @include breakpoint(medium) {
+            @include grid-col-size(6);
+        }
+    }
+}
