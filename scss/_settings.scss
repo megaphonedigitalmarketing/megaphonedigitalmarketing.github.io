@@ -69,20 +69,20 @@ $global-font-size: 100%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 $foundation-palette: (
-  primary: #6F9BA0,
+  primary: #fd674b,
   secondary: #13354f,
   success: #57a968,
   warning: #d49930,
   alert: #f44336,
 );
-$light-gray: #708D9D;
+$light-gray: #fbfaf5;
 $medium-gray: #5B7982;
 $dark-gray: #13354F;
-$black: #13354F;
-$white: #EDF4F4;
-$body-background: $white;
+$black: #222222;
+$white: #fff;
+$body-background: $light-gray;
 $body-font-color: $black;
-$body-font-family: 'Open Sans', sans-serif;
+$body-font-family: "ff-tisa-sans-web-pro",sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
@@ -129,7 +129,7 @@ $block-grid-max: 8;
 // 4. Base Typography
 // ------------------
 
-$header-font-family: 'Work Sans', sans-serif;
+$header-font-family: "brandon-grotesque",sans-serif;
 $header-font-weight: bold;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
