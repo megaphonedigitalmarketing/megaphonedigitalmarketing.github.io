@@ -1,36 +1,52 @@
+h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+i {
+    background: $primary-color;
+    border-radius: 50px;
+    color: $white;
+    padding: 10px;
+}
+
+hr {
+    background: $primary-color;
+    border: 0;
+    margin: 5px auto 20px;
+    width: 60px;
+    height: 2px;
+}
+
+.button {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
 header {
-    background: $white;
+    background: url(/img/background.svg) bottom center no-repeat, $white;
+    background-size: 600px;
+    padding: 30px 0;
     text-align: center;
 
-    i {
-        display: block;
-        font-size: 3em;
-        color: $primary-color;
-    }
-
     .logo {
-        border-bottom: 2px solid $primary-color;
         color: $black;
-        display: inline-block;
+        font-family: $alt-font;
         font-size: 3.5em;
-        font-weight: 900;
-        // text-shadow:
-        //     1px 0px 1px $primary-color, 0px 1px 1px $primary-color,
-        //     2px 1px 1px $primary-color, 1px 2px 1px $primary-color,
-        //     3px 2px 1px $primary-color, 2px 3px 1px $primary-color,
-        //     4px 3px 1px $primary-color, 3px 4px 1px $primary-color,
-        //     5px 4px 1px $primary-color, 4px 5px 1px $primary-color,
-        //     6px 5px 1px $primary-color, 5px 6px 1px $primary-color,
-        //     7px 6px 1px $primary-color;
+        font-weight: 700;
+        letter-spacing: 4px;
+        text-shadow:
+            1px 0px 1px $primary-color, 0px 1px 1px $primary-color,
+            2px 1px 1px $primary-color, 1px 2px 1px $primary-color;
     }
 
     h4 {
         display: block;
         font-size: 1.2em;
         font-weight: normal;
+        letter-spacing: 6px;
         margin: 4px 0 20px;
         text-transform: uppercase;
-        letter-spacing: 1px;
     }
 }
 
@@ -41,10 +57,15 @@ header {
 }
 
 main {
-    background: $primary-color;
-    padding: 60px 0;
+    background: url(/img/background2.svg) top center no-repeat, $primary-color;
+    background-size: 600px;
+
+    .container {
+        padding: 60px 0;
+    }
 
     .tag {
+
         h2 {
             border-bottom: 2px solid $white;
             color: $white;
@@ -60,14 +81,16 @@ main {
 
         @include breakpoint(medium) {
             @include grid-col-size(6);
+            @include grid-column-offset(1);
         }
     }
 
     .graphic {
         @include grid-col;
+        @include grid-column-end;
 
         @include breakpoint(medium) {
-            @include grid-col-size(6);
+            @include grid-col-size(4);
         }
     }
 }
@@ -75,10 +98,30 @@ main {
 .services {
     background: $white;
     padding: 60px 0;
+    text-align: center;
 
-    h2 {
-        color: $dark-gray;
+    h3 {
+        color: $medium-gray;
+        font-family: $alt-font;
+        font-weight: bold;
         text-align: center;
+    }
+
+    i {
+        border-radius: 70px;
+        padding: 17px 14px;
+        margin-bottom: 20px;
+    }
+
+    h4 {
+        color: $primary-color;
+
+    }
+
+    .box {
+        background: $light-gray;
+        padding: 40px 0;
+        margin: 30px 0;
     }
 
     .column {
@@ -88,36 +131,11 @@ main {
             @include grid-col-size(4);
         }
     }
-
-    .card {
-        background: $medium-gray;
-        border-radius: 8px;
-        color: $white;
-
-        .card-divider {
-            background: $medium-gray;
-
-            h3 {
-                color: $white;
-                font-family: $body-font-family;
-                font-size: 1em;
-                font-weight: normal;
-                text-transform: uppercase;
-            }
-        }
-
-        .card-image {
-
-        }
-
-        .card-section {
-
-        }
-    }
 }
 
 footer {
-    background: $primary-color;
+    background: $medium-gray;
+    color: $white;
     padding: 60px 0;
 
     .address {
