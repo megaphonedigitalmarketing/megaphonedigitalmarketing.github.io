@@ -23,6 +23,11 @@ hr {
     letter-spacing: 1px;
 }
 
+.container {
+    max-width: 96%;
+    margin: 0 auto;
+}
+
 header {
     background: url(/img/background.svg) bottom center no-repeat, $white;
     background-size: 600px;
@@ -32,7 +37,10 @@ header {
     .logo {
         color: $black;
         font-family: $alt-font;
-        font-size: 3.5em;
+        font-size: 2;
+        @include breakpoint(medium) {
+            font-size: 3.5em;
+        }
         font-weight: 700;
         letter-spacing: 4px;
         text-shadow:
@@ -42,7 +50,10 @@ header {
 
     h4 {
         display: block;
-        font-size: 1.2em;
+        font-size: .875em;
+        @include breakpoint(medium) {
+            font-size: 1.2em;
+        }
         font-weight: normal;
         letter-spacing: 6px;
         margin: 4px 0 20px;
@@ -97,7 +108,7 @@ main {
 
 .services {
     background: $white;
-    padding: 60px 0;
+    padding: 60px 0 10px;
     text-align: center;
 
     h3 {
@@ -109,8 +120,19 @@ main {
 
     i {
         border-radius: 70px;
-        padding: 17px 14px;
         margin-bottom: 20px;
+    }
+
+    .one {
+        padding: 17px 13px;
+    }
+
+    .two {
+        padding: 17px 12px;
+    }
+
+    .three {
+        padding: 17px 15px;
     }
 
     h4 {
@@ -134,23 +156,20 @@ main {
 }
 
 footer {
-    background: $medium-gray;
+    background: url(/img/background.svg) bottom center no-repeat, $medium-gray;
+    background-size: 600px;
     color: $white;
-    padding: 60px 0;
+    padding: 40px 0;
+    text-align: center;
 
     .address {
         @include grid-col;
 
-        @include breakpoint(medium) {
-            @include grid-col-size(6);
-        }
-    }
-
-    .contact {
-        @include grid-col;
-
-        @include breakpoint(medium) {
-            @include grid-col-size(6);
+        h4 {
+            color: $primary-color;
+            font-family: $alt-font;
+            font-weight: bold;
+            letter-spacing: 2px;
         }
     }
 }

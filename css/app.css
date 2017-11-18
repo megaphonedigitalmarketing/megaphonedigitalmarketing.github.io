@@ -3040,6 +3040,10 @@ hr {
   text-transform: uppercase;
   letter-spacing: 1px; }
 
+.container {
+  max-width: 96%;
+  margin: 0 auto; }
+
 header {
   background: url(/img/background.svg) bottom center no-repeat, #fff;
   background-size: 600px;
@@ -3048,17 +3052,23 @@ header {
   header .logo {
     color: #222222;
     font-family: "brandon-grotesque", sans-serif;
-    font-size: 3.5em;
+    font-size: 2;
     font-weight: 700;
     letter-spacing: 4px;
     text-shadow: 1px 0px 1px #fd674b, 0px 1px 1px #fd674b, 2px 1px 1px #fd674b, 1px 2px 1px #fd674b; }
+    @media print, screen and (min-width: 40em) {
+      header .logo {
+        font-size: 3.5em; } }
   header h4 {
     display: block;
-    font-size: 1.2em;
+    font-size: .875em;
     font-weight: normal;
     letter-spacing: 6px;
     margin: 4px 0 20px;
     text-transform: uppercase; }
+    @media print, screen and (min-width: 40em) {
+      header h4 {
+        font-size: 1.2em; } }
 
 .container {
   max-width: 75rem;
@@ -3122,7 +3132,7 @@ main {
 
 .services {
   background: #fff;
-  padding: 60px 0;
+  padding: 60px 0 10px;
   text-align: center; }
   .services h3 {
     color: #5B7982;
@@ -3131,8 +3141,13 @@ main {
     text-align: center; }
   .services i {
     border-radius: 70px;
-    padding: 17px 14px;
     margin-bottom: 20px; }
+  .services .one {
+    padding: 17px 13px; }
+  .services .two {
+    padding: 17px 12px; }
+  .services .three {
+    padding: 17px 15px; }
   .services h4 {
     color: #fd674b; }
   .services .box {
@@ -3155,9 +3170,11 @@ main {
         width: 33.33333%; } }
 
 footer {
-  background: #5B7982;
+  background: url(/img/background.svg) bottom center no-repeat, #5B7982;
+  background-size: 600px;
   color: #fff;
-  padding: 60px 0; }
+  padding: 40px 0;
+  text-align: center; }
   footer .address {
     width: 100%;
     float: left;
@@ -3169,20 +3186,8 @@ footer {
         padding-left: 0.9375rem; } }
     footer .address:last-child:not(:first-child) {
       float: right; }
-    @media print, screen and (min-width: 40em) {
-      footer .address {
-        width: 50%; } }
-  footer .contact {
-    width: 100%;
-    float: left;
-    padding-right: 0.625rem;
-    padding-left: 0.625rem; }
-    @media print, screen and (min-width: 40em) {
-      footer .contact {
-        padding-right: 0.9375rem;
-        padding-left: 0.9375rem; } }
-    footer .contact:last-child:not(:first-child) {
-      float: right; }
-    @media print, screen and (min-width: 40em) {
-      footer .contact {
-        width: 50%; } }
+    footer .address h4 {
+      color: #fd674b;
+      font-family: "brandon-grotesque", sans-serif;
+      font-weight: bold;
+      letter-spacing: 2px; }
