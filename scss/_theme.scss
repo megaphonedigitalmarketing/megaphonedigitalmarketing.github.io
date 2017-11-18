@@ -29,30 +29,38 @@ hr {
 }
 
 header {
-    background: url(/img/background.svg) bottom center no-repeat, $white;
-    background-size: 600px;
+    // background: url(/img/background.svg) bottom center no-repeat, $white;
+    // background-size: 600px;
     padding: 30px 0;
     text-align: center;
 
+    i {
+        background: none;
+        border: 1px solid $secondary-color;
+        border-radius: 50px;
+        color: $secondary-color;
+        padding: 10px;
+        margin-bottom: 30px;
+    }
+
     .logo {
-        color: $black;
-        font-family: $alt-font;
+        color: $primary-color;
         font-size: 2;
+        letter-spacing: 6px;
+        margin-bottom: 20px;
+
         @include breakpoint(medium) {
-            font-size: 3.5em;
+            font-size: 40px;
         }
-        font-weight: 700;
-        letter-spacing: 4px;
-        text-shadow:
-            1px 0px 1px $primary-color, 0px 1px 1px $primary-color,
-            2px 1px 1px $primary-color, 1px 2px 1px $primary-color;
     }
 
     h4 {
         display: block;
-        font-size: .875em;
+        font-size: .575em;
+        font-weight: 300;
+
         @include breakpoint(medium) {
-            font-size: 1.2em;
+            font-size: .875em;
         }
         font-weight: normal;
         letter-spacing: 6px;
@@ -156,7 +164,7 @@ main {
 }
 
 footer {
-    background: url(/img/background.svg) bottom center no-repeat, $medium-gray;
+    background: url(/img/background2.svg) top center no-repeat, $medium-gray;
     background-size: 600px;
     color: $white;
     padding: 40px 0;
