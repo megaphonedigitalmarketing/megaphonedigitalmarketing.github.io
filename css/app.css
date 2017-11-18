@@ -3045,10 +3045,12 @@ hr {
   margin: 0 auto; }
 
 header {
+  background: url(/img/background1.svg) bottom center no-repeat, #fff;
+  background-size: 600px;
   padding: 30px 0;
   text-align: center; }
   header i {
-    background: none;
+    background: #fff;
     border: 1px solid #8c8c8c;
     border-radius: 50px;
     color: #8c8c8c;
@@ -3155,9 +3157,11 @@ main {
   .services h4 {
     color: #b0925a; }
   .services .box {
-    background: #f2f2f2;
+    background: url(/img/background1.svg) bottom center no-repeat, #f2f2f2;
+    background-size: 600px;
     padding: 40px 0;
-    margin: 30px 0; }
+    margin: 30px 0;
+    max-width: 100%; }
   .services .column, .services .columns {
     width: 100%;
     float: left;

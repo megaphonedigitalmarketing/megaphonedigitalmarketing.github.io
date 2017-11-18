@@ -29,13 +29,13 @@ hr {
 }
 
 header {
-    // background: url(/img/background.svg) bottom center no-repeat, $white;
-    // background-size: 600px;
+    background: url(/img/background1.svg) bottom center no-repeat, $white;
+    background-size: 600px;
     padding: 30px 0;
     text-align: center;
 
     i {
-        background: none;
+        background: $white;
         border: 1px solid $secondary-color;
         border-radius: 50px;
         color: $secondary-color;
@@ -149,9 +149,11 @@ main {
     }
 
     .box {
-        background: $light-gray;
+        background: url(/img/background1.svg) bottom center no-repeat, $light-gray;
+        background-size: 600px;
         padding: 40px 0;
         margin: 30px 0;
+        max-width: 100%;
     }
 
     .column {
