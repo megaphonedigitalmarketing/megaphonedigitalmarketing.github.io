@@ -84,12 +84,11 @@ main {
     }
 
     .tag {
-
         h2 {
-            border-bottom: 2px solid $white;
+            border-bottom: 1px solid $white;
             color: $white;
-            padding-bottom: 8px;
-            margin-bottom: 8px;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
         }
 
         p {
@@ -99,17 +98,29 @@ main {
         @include grid-col;
 
         @include breakpoint(medium) {
-            @include grid-col-size(6);
+            @include grid-col-size(5);
             @include grid-column-offset(1);
         }
     }
 
-    .graphic {
+    .people {
+        text-align: center;
+
+        img {
+            max-width: 240px;
+            height: auto;
+            margin: 0;
+            padding: 3px;
+            border: 1px solid $white;
+            border-radius: 200px;
+        }
+
         @include grid-col;
         @include grid-column-end;
 
         @include breakpoint(medium) {
             @include grid-col-size(4);
+            @include grid-column-offset(1);
         }
     }
 }
@@ -119,33 +130,12 @@ main {
     padding: 60px 0 10px;
     text-align: center;
 
-    h3 {
-        color: $medium-gray;
-        font-family: $alt-font;
-        font-weight: bold;
-        text-align: center;
-    }
-
-    i {
-        border-radius: 70px;
-        margin-bottom: 20px;
-    }
-
-    .one {
-        padding: 17px 13px;
-    }
-
-    .two {
-        padding: 17px 12px;
-    }
-
-    .three {
-        padding: 17px 15px;
-    }
-
-    h4 {
-        color: $primary-color;
-
+    .people {
+        h3 {
+            color: $medium-gray;
+            font-family: $alt-font;
+            font-weight: bold;
+        }
     }
 
     .box {
@@ -154,13 +144,35 @@ main {
         padding: 40px 0;
         margin: 30px 0;
         max-width: 100%;
-    }
 
-    .column {
-        @include grid-col;
+        i {
+            border-radius: 70px;
+            margin-bottom: 20px;
+        }
 
-        @include breakpoint(medium) {
-            @include grid-col-size(4);
+        .one {
+            padding: 17px 13px;
+        }
+
+        .two {
+            padding: 17px 12px;
+        }
+
+        .three {
+            padding: 17px 15px;
+        }
+
+        h4 {
+            color: $primary-color;
+
+        }
+
+        .column {
+            @include grid-col;
+
+            @include breakpoint(medium) {
+                @include grid-col-size(4);
+            }
         }
     }
 }

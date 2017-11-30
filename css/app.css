@@ -2545,34 +2545,27 @@ table {
   width: 100%;
   margin-bottom: 1rem;
   border-radius: 0; }
-  table thead,
-  table tbody,
-  table tfoot {
+  thead, tbody, tfoot {
     border: 1px solid #f2f2f2;
     background-color: #fff; }
-  table caption {
+  caption {
     padding: 0.5rem 0.625rem 0.625rem;
     font-weight: bold; }
-  table thead {
+  thead {
     background: #f9f9f9;
     color: #2e2e2e; }
-  table tfoot {
+  tfoot {
     background: #f2f2f2;
     color: #2e2e2e; }
-  table thead tr,
-  table tfoot tr {
+  thead tr, tfoot tr {
     background: transparent; }
-  table thead th,
-  table thead td,
-  table tfoot th,
-  table tfoot td {
+  thead th, thead td, tfoot th, tfoot td {
     padding: 0.5rem 0.625rem 0.625rem;
     font-weight: bold;
     text-align: left; }
-  table tbody th,
-  table tbody td {
+  tbody th, tbody td {
     padding: 0.5rem 0.625rem 0.625rem; }
-  table tbody tr:nth-child(even) {
+  tbody tr:nth-child(even) {
     border-bottom: 0;
     background-color: #f2f2f2; }
   table.unstriped tbody {
@@ -3103,10 +3096,10 @@ main {
     padding-right: 0.625rem;
     padding-left: 0.625rem; }
     main .tag h2 {
-      border-bottom: 2px solid #fff;
+      border-bottom: 1px solid #fff;
       color: #fff;
-      padding-bottom: 8px;
-      margin-bottom: 8px; }
+      padding-bottom: 20px;
+      margin-bottom: 20px; }
     main .tag p {
       color: #fff; }
     @media print, screen and (min-width: 40em) {
@@ -3117,65 +3110,73 @@ main {
       float: right; }
     @media print, screen and (min-width: 40em) {
       main .tag {
-        width: 50%;
+        width: 41.66667%;
         margin-left: 8.33333%; } }
-  main .graphic {
+  main .people {
+    text-align: center;
     width: 100%;
     float: left;
     padding-right: 0.625rem;
     padding-left: 0.625rem; }
+    main .people img {
+      max-width: 240px;
+      height: auto;
+      margin: 0;
+      padding: 3px;
+      border: 1px solid #fff;
+      border-radius: 200px; }
     @media print, screen and (min-width: 40em) {
-      main .graphic {
+      main .people {
         padding-right: 0.9375rem;
         padding-left: 0.9375rem; } }
-    main .graphic:last-child:not(:first-child) {
+    main .people:last-child:not(:first-child) {
       float: right; }
-    main .graphic:last-child:last-child {
+    main .people:last-child:last-child {
       float: left; }
     @media print, screen and (min-width: 40em) {
-      main .graphic {
-        width: 33.33333%; } }
+      main .people {
+        width: 33.33333%;
+        margin-left: 8.33333%; } }
 
 .services {
   background: #fff;
   padding: 60px 0 10px;
   text-align: center; }
-  .services h3 {
+  .services .people h3 {
     color: #636363;
     font-family: "brandon-grotesque", sans-serif;
-    font-weight: bold;
-    text-align: center; }
-  .services i {
-    border-radius: 70px;
-    margin-bottom: 20px; }
-  .services .one {
-    padding: 17px 13px; }
-  .services .two {
-    padding: 17px 12px; }
-  .services .three {
-    padding: 17px 15px; }
-  .services h4 {
-    color: #b0925a; }
+    font-weight: bold; }
   .services .box {
     background: url(/img/background1.svg) bottom center no-repeat, #f2f2f2;
     background-size: 600px;
     padding: 40px 0;
     margin: 30px 0;
     max-width: 100%; }
-  .services .column, .services .columns {
-    width: 100%;
-    float: left;
-    padding-right: 0.625rem;
-    padding-left: 0.625rem; }
-    @media print, screen and (min-width: 40em) {
-      .services .column, .services .columns {
-        padding-right: 0.9375rem;
-        padding-left: 0.9375rem; } }
-    .services .column:last-child:not(:first-child), .services .columns:last-child:not(:first-child) {
-      float: right; }
-    @media print, screen and (min-width: 40em) {
-      .services .column, .services .columns {
-        width: 33.33333%; } }
+    .services .box i {
+      border-radius: 70px;
+      margin-bottom: 20px; }
+    .services .box .one {
+      padding: 17px 13px; }
+    .services .box .two {
+      padding: 17px 12px; }
+    .services .box .three {
+      padding: 17px 15px; }
+    .services .box h4 {
+      color: #b0925a; }
+    .services .box .column, .services .box .columns {
+      width: 100%;
+      float: left;
+      padding-right: 0.625rem;
+      padding-left: 0.625rem; }
+      @media print, screen and (min-width: 40em) {
+        .services .box .column, .services .box .columns {
+          padding-right: 0.9375rem;
+          padding-left: 0.9375rem; } }
+      .services .box .column:last-child:not(:first-child), .services .box .columns:last-child:not(:first-child) {
+        float: right; }
+      @media print, screen and (min-width: 40em) {
+        .services .box .column, .services .box .columns {
+          width: 33.33333%; } }
 
 footer {
   background: url(/img/background2.svg) top center no-repeat, #636363;
